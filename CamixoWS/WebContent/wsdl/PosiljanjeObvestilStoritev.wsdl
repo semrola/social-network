@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="PosiljanjeObvestilStoritev" 
+		targetNamespace="http://www.camixo.com/PosiljanjeObvestilStoritev/" 
+		xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+		xmlns:tns="http://www.camixo.com/PosiljanjeObvestilStoritev/" 
+		xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:shema="http://www.camixo.com/PosiljanjeObvestilStoritev/shema">
+  <wsdl:types>
+  	<xsd:schema targetNamespace="http://www.camixo.com/PosiljanjeObvestilStoritev/">
+  		<xsd:import namespace="http://www.camixo.com/PosiljanjeObvestilStoritev/shema" schemaLocation="shema.xsd"/>
+  		<xsd:element name="posljiSporocilo" type="shema:SporociloTip"/>
+  		<xsd:element name="posljiSporociloResponse" type="shema:RezultatTip" />	
+  	</xsd:schema>
+    
+  </wsdl:types>
+  <wsdl:message name="PosljiSporociloRequestMessage">
+    <wsdl:part element="tns:posljiSporocilo" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="PosljiSporociloResponseMessage">
+    <wsdl:part element="tns:posljiSporociloResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="PosiljanjeObvestilStoritev">
+    <wsdl:operation name="posljiSporocilo">
+      <wsdl:input message="tns:PosljiSporociloRequestMessage"/>
+      <wsdl:output message="tns:PosljiSporociloResponseMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PosiljanjeObvestilStoritevSOAP" type="tns:PosiljanjeObvestilStoritev">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="posljiSporocilo">
+      <soap:operation soapAction="http://www.camixo.com/PosiljanjeObvestilStoritev/posljiSporocilo"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PosiljanjeObvestilStoritev">
+    <wsdl:port binding="tns:PosiljanjeObvestilStoritevSOAP" name="PosiljanjeObvestilStoritevSOAP">
+      <soap:address location="http://www.example.org/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

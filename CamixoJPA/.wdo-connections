@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connections:connections xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connections="http://www.ibm.com/websphere/wdo/connections">
+  <connection id="prpo12_projekt28">
+    <development xsi:type="connections:rsc-live-connection" id="prpo12_projekt28_dev" name="prpo12_projekt28"/>
+    <runtime xsi:type="connections:driver-manager-connection" auto-deploy="true" class-location="C:\IBM\WebSphere\AppServer\lib\mysql-connector-java-5.1.22-bin.jar" id="prpo12_projekt28_runtime" class-name="com.mysql.jdbc.Driver" url="jdbc:mysql://193.2.72.78/prpo12_projekt28" userid="projekt28"/>
+  </connection>
+</connections:connections>

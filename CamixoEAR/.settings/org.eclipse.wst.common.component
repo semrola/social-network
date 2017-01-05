@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="CamixoEAR">
+        <wb-resource deploy-path="/" source-path="/" tag="defaultRootSource"/>
+        <dependent-module archiveName="Camixo.war" deploy-path="/" handle="module:/resource/Camixo/Camixo">
+            <dependent-object>Module_1352138143808</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="CamixoJPA.jar" deploy-path="/lib" handle="module:/resource/CamixoJPA/CamixoJPA">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="CamixoEJB.jar" deploy-path="/" handle="module:/resource/CamixoEJB/CamixoEJB">
+            <dependent-object>Module_1353940451859</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="CamixoEJBClient.jar" deploy-path="/" handle="module:/resource/CamixoEJBClient/CamixoEJBClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="TemaPosiljatelj.jar" deploy-path="/" handle="module:/resource/TemaPosiljatelj/TemaPosiljatelj">
+            <dependent-object>Module_1354714084104</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="TemaSprejemnik.jar" deploy-path="/" handle="module:/resource/TemaSprejemnik/TemaSprejemnik">
+            <dependent-object>Module_1354714106401</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="VrstaPosiljatelj.jar" deploy-path="/" handle="module:/resource/VrstaPosiljatelj/VrstaPosiljatelj">
+            <dependent-object>Module_1355259767969</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="VrstaSprejemnik.jar" deploy-path="/" handle="module:/resource/VrstaSprejemnik/VrstaSprejemnik">
+            <dependent-object>Module_1355262045437</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="CamixoWS.war" deploy-path="/" handle="module:/resource/CamixoWS/CamixoWS">
+            <dependent-object>Module_1357339854768</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

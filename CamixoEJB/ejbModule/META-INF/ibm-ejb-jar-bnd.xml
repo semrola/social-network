@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejb-jar-bnd
+        xmlns="http://websphere.ibm.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://websphere.ibm.com/xml/ns/javaee http://websphere.ibm.com/xml/ns/javaee/ibm-ejb-jar-bnd_1_1.xsd"
+        version="1.1">
+
+<session name="UpravljalecObvestilBean">      
+      <message-destination-ref name="ejb.UpravljalecObvestilBean/vrsta" binding-name="jms/NotificationsQueue" />      
+      <resource-ref  name="ejb.UpravljalecObvestilBean/cf" binding-name="jms/CamixoCF" />
+</session>
+
+<session name="PosiljanjeObvestilBean">      
+      <message-destination-ref name="ejb.PosiljanjeObvestilBean/vrsta" binding-name="jms/NotificationsQueue" />      
+      <resource-ref name="ejb.PosiljanjeObvestilBean/cf" binding-name="jms/CamixoCF" />
+      <resource-ref name="ejb.PosiljanjeObvestilBean/session" binding-name="mail/Camixo" />
+</session>
+
+<message-driven name="NovoObvestiloMDB">
+      <jca-adapter activation-spec-binding-name="eis/NewNotification" />
+</message-driven>
+
+</ejb-jar-bnd>

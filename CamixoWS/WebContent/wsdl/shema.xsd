@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+		targetNamespace="http://www.camixo.com/PosiljanjeObvestilStoritev/shema"
+		xmlns:tns="http://www.camixo.com/PosiljanjeObvestilStoritev/shema" 
+		elementFormDefault="qualified">
+	
+	<element name="posljiSporocilo" type="tns:SporociloTip"/>
+	<element name="posljiSporociloResponse" type="tns:RezultatTip" />	
+	
+	<complexType name="SporociloTip">
+		<sequence>
+			<element name="email" type="string" />
+			<element name="naziv" type="string" />
+			<element name="vsebina" type="string" />
+		</sequence>
+	</complexType>
+	
+	<simpleType name="RezultatTip">
+		<restriction base="string">
+			<enumeration value="OK" />
+			<enumeration value="Error" />
+		</restriction>
+	</simpleType>
+	
+</schema>
